@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobFinder.API", "JobFinder.API\JobFinder.API.csproj", "{BE501A96-7885-484A-8280-C1392518F0CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE501A96-7885-484A-8280-C1392518F0CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE501A96-7885-484A-8280-C1392518F0CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE501A96-7885-484A-8280-C1392518F0CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE501A96-7885-484A-8280-C1392518F0CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {938B9A09-F590-4FD2-A3A6-7A0638C23F95}
+	EndGlobalSection
+EndGlobal
