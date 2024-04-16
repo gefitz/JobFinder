@@ -1,20 +1,20 @@
-<section class="section-search">
-    <div class="div-input-search">  
-      <input id="txtFunção" type="text" placeholder="Função" class="input-search"/>
-      <input id="txtCidade" type="text" placeholder="Cidade/Estado" class="input-search"/>
-      <button type="button" class="btn-search"><span style="color:#fff">Buscar Vagas</span></button>
+
+  <div class="div-nav-bar">
+    <a routerLink="/" class="h1-nav-bar"><img src="assets/img/logo.jpg" alt=""></a>
+    <div class="div-btn-login">
+
+      <button type="button"class="btn-nav-bar login">Login</button>
+      <button type="button" class="btn-nav-bar cadastro" routerLink="/cadastro">Cadastra-se</button>
     </div>
-</section>
-<section class="section-info">
-  <h2>Total de Vagas e Candidato</h2>
-  <div class="div-info-Geral">
-    <div class="div-info-Vagas">
-      <span>Total de Vagas</span>
-      <span id="totalVagas">5</span>
-    </div>
-      <div class="div-info-Candidato">
-        <span>Total de Candidato</span>
-        <span id="totalCandidato">5</span>
-      </div>
   </div>
-</section>
+    <router-outlet></router-outlet>    
+    <footer class="footer">
+      <ul>
+        <li><a href="https://www.linkedin.com/in/geovane-de-almeida-fitz/"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://wa.me/5541998582485"><i class="fab fa-whatsapp"></i></a></li>
+        <li><a href="https://github.com/gefitz"><i class="fab fa-github"></i></a></li>
+      </ul>
+      <h3>Geovane de Almeida Fitz - 2024</h3>
+    </footer>
+    
+
