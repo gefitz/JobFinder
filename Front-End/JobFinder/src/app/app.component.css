@@ -1,0 +1,73 @@
+
+.div-nav-bar{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    background: #46abd9;
+}
+
+.h1-nav-bar{
+    margin-top: 10px;
+    position: absolute;
+    left: 45px;
+    background-color: transparent;
+}
+.h1-nav-bar img{
+    max-width: 250px;
+    max-height: 70px;
+}
+.div-btn-login{
+    display: flex;
+    position: absolute;
+    right: 50px;
+    top:15px;
+    height: 15vh;
+    background: transparent;
+}
+.btn-nav-bar{
+    margin-top: 10px;
+    width: 60px;
+    max-height: 35px;
+
+}
+.btn-nav-bar:first-of-type{
+    margin-right: 5px;
+}
+.cadastro{
+    width: 100px;
+    color: #fff;
+}
+.footer{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #e7e3e3c9;
+    border-top: 1px solid #c7c7c7c7;
+    padding: 20px 0;
+}
+.footer h3{
+    padding: 15px 0;
+}
+.footer ul{
+    display: inline flex;
+    font-size:30px ;
+    margin-top: 15px;
+}
+.footer ul li {
+    margin-right: 10px;
+}
+.footer .fa-whatsapp{
+    color: green;
+}
+.footer .fa-github{
+    color: black;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
