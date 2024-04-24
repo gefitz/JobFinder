@@ -8,6 +8,8 @@ namespace JobFinder.API.DTO.Mapper
         public MapperProfile() { 
             CreateMap<CandidatoModel, CandidatoDTO>().ReverseMap();
             CreateMap<CandidatoInsertModel,CandidatoDTO>().ReverseMap();
+            CreateMap<LoginModel,LoginDTO>().ReverseMap();
+            CreateMap<LoginInsertModel,LoginDTO>().ReverseMap();
         }
     }
 }
