@@ -11,3 +11,16 @@ C:\Users\Ge\source\repos\JobFinder\JobFinder.Data\obj\Debug\net8.0\JobFinder.Dat
 C:\Users\Ge\source\repos\JobFinder\JobFinder.Data\obj\Debug\net8.0\refint\JobFinder.Data.dll
 C:\Users\Ge\source\repos\JobFinder\JobFinder.Data\obj\Debug\net8.0\JobFinder.Data.pdb
 C:\Users\Ge\source\repos\JobFinder\JobFinder.Data\obj\Debug\net8.0\ref\JobFinder.Data.dll
+C:\Users\Ge\source\repos\JobFinder\Back-End\JobFinder.Data\bin\Debug\net8.0\JobFinder.Data.deps.json
+C:\Users\Ge\source\repos\JobFinder\Back-End\JobFinder.Data\bin\Debug\net8.0\JobFinder.Data.dll
+C:\Users\Ge\source\repos\JobFinder\Back-End\JobFinder.Data\bin\Debug\net8.0\JobFinder.Data.pdb
+C:\Users\Ge\source\repos\JobFinder\Back-End\JobFinder.Data\obj\Debug\net8.0\JobFinder.Data.csproj.AssemblyReference.cache
+C:\Users\Ge\source\repos\JobFinder\Back-End\JobFinder.Data\obj\Debug\net8.0\JobFinder.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ge\source\repos\JobFinder\Back-End\JobFinder.Data\obj\Debug\net8.0\JobFinder.Data.AssemblyInfoInputs.cache
+C:\Users\Ge\source\repos\JobFinder\Back-End\JobFinder.Data\obj\Debug\net8.0\JobFinder.Data.AssemblyInfo.cs
+C:\Users\Ge\source\repos\JobFinder\Back-End\JobFinder.Data\obj\Debug\net8.0\JobFinder.Data.csproj.CoreCompileInputs.cache
+C:\Users\Ge\source\repos\JobFinder\Back-End\JobFinder.Data\obj\Debug\net8.0\JobFinder.Data.sourcelink.json
+C:\Users\Ge\source\repos\JobFinder\Back-End\JobFinder.Data\obj\Debug\net8.0\JobFinder.Data.dll
+C:\Users\Ge\source\repos\JobFinder\Back-End\JobFinder.Data\obj\Debug\net8.0\refint\JobFinder.Data.dll
+C:\Users\Ge\source\repos\JobFinder\Back-End\JobFinder.Data\obj\Debug\net8.0\JobFinder.Data.pdb
+C:\Users\Ge\source\repos\JobFinder\Back-End\JobFinder.Data\obj\Debug\net8.0\ref\JobFinder.Data.dll

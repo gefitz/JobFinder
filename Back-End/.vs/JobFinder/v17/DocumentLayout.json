@@ -1,12 +1,185 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Ge\\source\\repos\\JobFinder\\Back-End\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CE1BB8C4-2CFC-414F-B578-57AF288CBC21}|JobFinder.API\\JobFinder.API.csproj|c:\\users\\ge\\source\\repos\\jobfinder\\back-end\\jobfinder.api\\model\\usertoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE1BB8C4-2CFC-414F-B578-57AF288CBC21}|JobFinder.API\\JobFinder.API.csproj|solutionrelative:jobfinder.api\\model\\usertoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE1BB8C4-2CFC-414F-B578-57AF288CBC21}|JobFinder.API\\JobFinder.API.csproj|c:\\users\\ge\\source\\repos\\jobfinder\\back-end\\jobfinder.api\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE1BB8C4-2CFC-414F-B578-57AF288CBC21}|JobFinder.API\\JobFinder.API.csproj|solutionrelative:jobfinder.api\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE1BB8C4-2CFC-414F-B578-57AF288CBC21}|JobFinder.API\\JobFinder.API.csproj|c:\\users\\ge\\source\\repos\\jobfinder\\back-end\\jobfinder.api\\service\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE1BB8C4-2CFC-414F-B578-57AF288CBC21}|JobFinder.API\\JobFinder.API.csproj|solutionrelative:jobfinder.api\\service\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE1BB8C4-2CFC-414F-B578-57AF288CBC21}|JobFinder.API\\JobFinder.API.csproj|c:\\users\\ge\\source\\repos\\jobfinder\\back-end\\jobfinder.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CE1BB8C4-2CFC-414F-B578-57AF288CBC21}|JobFinder.API\\JobFinder.API.csproj|solutionrelative:jobfinder.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A19B1949-F2C9-45FF-8D06-F7AE5855C121}|JobFinder.Data\\JobFinder.Data.csproj|c:\\users\\ge\\source\\repos\\jobfinder\\back-end\\jobfinder.data\\database\\logindb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A19B1949-F2C9-45FF-8D06-F7AE5855C121}|JobFinder.Data\\JobFinder.Data.csproj|solutionrelative:jobfinder.data\\database\\logindb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE1BB8C4-2CFC-414F-B578-57AF288CBC21}|JobFinder.API\\JobFinder.API.csproj|c:\\users\\ge\\source\\repos\\jobfinder\\back-end\\jobfinder.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE1BB8C4-2CFC-414F-B578-57AF288CBC21}|JobFinder.API\\JobFinder.API.csproj|solutionrelative:jobfinder.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A19B1949-F2C9-45FF-8D06-F7AE5855C121}|JobFinder.Data\\JobFinder.Data.csproj|c:\\users\\ge\\source\\repos\\jobfinder\\back-end\\jobfinder.data\\database\\sql\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A19B1949-F2C9-45FF-8D06-F7AE5855C121}|JobFinder.Data\\JobFinder.Data.csproj|solutionrelative:jobfinder.data\\database\\sql\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A19B1949-F2C9-45FF-8D06-F7AE5855C121}|JobFinder.Data\\JobFinder.Data.csproj|c:\\users\\ge\\source\\repos\\jobfinder\\back-end\\jobfinder.data\\model\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A19B1949-F2C9-45FF-8D06-F7AE5855C121}|JobFinder.Data\\JobFinder.Data.csproj|solutionrelative:jobfinder.data\\model\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE1BB8C4-2CFC-414F-B578-57AF288CBC21}|JobFinder.API\\JobFinder.API.csproj|c:\\users\\ge\\source\\repos\\jobfinder\\back-end\\jobfinder.api\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE1BB8C4-2CFC-414F-B578-57AF288CBC21}|JobFinder.API\\JobFinder.API.csproj|solutionrelative:jobfinder.api\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE1BB8C4-2CFC-414F-B578-57AF288CBC21}|JobFinder.API\\JobFinder.API.csproj|c:\\users\\ge\\source\\repos\\jobfinder\\back-end\\jobfinder.api\\dto\\mapper\\mapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE1BB8C4-2CFC-414F-B578-57AF288CBC21}|JobFinder.API\\JobFinder.API.csproj|solutionrelative:jobfinder.api\\dto\\mapper\\mapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Ge\\source\\repos\\JobFinder\\Back-End\\JobFinder.API\\appsettings.json",
+              "RelativeDocumentMoniker": "JobFinder.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\Ge\\source\\repos\\JobFinder\\Back-End\\JobFinder.API\\appsettings.json",
+              "RelativeToolTip": "JobFinder.API\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-24T17:29:50.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Ge\\source\\repos\\JobFinder\\Back-End\\JobFinder.API\\Program.cs",
+              "RelativeDocumentMoniker": "JobFinder.API\\Program.cs",
+              "ToolTip": "C:\\Users\\Ge\\source\\repos\\JobFinder\\Back-End\\JobFinder.API\\Program.cs",
+              "RelativeToolTip": "JobFinder.API\\Program.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAD4vz0AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T18:15:23.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserToken.cs",
+              "DocumentMoniker": "C:\\Users\\Ge\\source\\repos\\JobFinder\\Back-End\\JobFinder.API\\Model\\UserToken.cs",
+              "RelativeDocumentMoniker": "JobFinder.API\\Model\\UserToken.cs",
+              "ToolTip": "C:\\Users\\Ge\\source\\repos\\JobFinder\\Back-End\\JobFinder.API\\Model\\UserToken.cs",
+              "RelativeToolTip": "JobFinder.API\\Model\\UserToken.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T17:09:37.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginDB.cs",
+              "DocumentMoniker": "C:\\Users\\Ge\\source\\repos\\JobFinder\\Back-End\\JobFinder.Data\\DataBase\\LoginDB.cs",
+              "RelativeDocumentMoniker": "JobFinder.Data\\DataBase\\LoginDB.cs",
+              "ToolTip": "C:\\Users\\Ge\\source\\repos\\JobFinder\\Back-End\\JobFinder.Data\\DataBase\\LoginDB.cs",
+              "RelativeToolTip": "JobFinder.Data\\DataBase\\LoginDB.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAawCwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T14:10:21.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Command.cs",
+              "DocumentMoniker": "C:\\Users\\Ge\\source\\repos\\JobFinder\\Back-End\\JobFinder.Data\\DataBase\\Sql\\Command.cs",
+              "RelativeDocumentMoniker": "JobFinder.Data\\DataBase\\Sql\\Command.cs",
+              "ToolTip": "C:\\Users\\Ge\\source\\repos\\JobFinder\\Back-End\\JobFinder.Data\\DataBase\\Sql\\Command.cs",
+              "RelativeToolTip": "JobFinder.Data\\DataBase\\Sql\\Command.cs",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAjwG0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T18:50:05.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginModel.cs",
+              "DocumentMoniker": "C:\\Users\\Ge\\source\\repos\\JobFinder\\Back-End\\JobFinder.Data\\Model\\LoginModel.cs",
+              "RelativeDocumentMoniker": "JobFinder.Data\\Model\\LoginModel.cs",
+              "ToolTip": "C:\\Users\\Ge\\source\\repos\\JobFinder\\Back-End\\JobFinder.Data\\Model\\LoginModel.cs",
+              "RelativeToolTip": "JobFinder.Data\\Model\\LoginModel.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAnwAwAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T15:53:35.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginService.cs",
+              "DocumentMoniker": "C:\\Users\\Ge\\source\\repos\\JobFinder\\Back-End\\JobFinder.API\\Service\\LoginService.cs",
+              "RelativeDocumentMoniker": "JobFinder.API\\Service\\LoginService.cs",
+              "ToolTip": "C:\\Users\\Ge\\source\\repos\\JobFinder\\Back-End\\JobFinder.API\\Service\\LoginService.cs",
+              "RelativeToolTip": "JobFinder.API\\Service\\LoginService.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAADwv0IAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T16:35:32.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LoginDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Ge\\source\\repos\\JobFinder\\Back-End\\JobFinder.API\\DTO\\LoginDTO.cs",
+              "RelativeDocumentMoniker": "JobFinder.API\\DTO\\LoginDTO.cs",
+              "ToolTip": "C:\\Users\\Ge\\source\\repos\\JobFinder\\Back-End\\JobFinder.API\\DTO\\LoginDTO.cs",
+              "RelativeToolTip": "JobFinder.API\\DTO\\LoginDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T16:33:27.811Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\Ge\\source\\repos\\JobFinder\\Back-End\\JobFinder.API\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "JobFinder.API\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\Ge\\source\\repos\\JobFinder\\Back-End\\JobFinder.API\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "JobFinder.API\\Controllers\\LoginController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAADwvysAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T16:32:44.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MapperProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Ge\\source\\repos\\JobFinder\\Back-End\\JobFinder.API\\DTO\\Mapper\\MapperProfile.cs",
+              "RelativeDocumentMoniker": "JobFinder.API\\DTO\\Mapper\\MapperProfile.cs",
+              "ToolTip": "C:\\Users\\Ge\\source\\repos\\JobFinder\\Back-End\\JobFinder.API\\DTO\\Mapper\\MapperProfile.cs",
+              "RelativeToolTip": "JobFinder.API\\DTO\\Mapper\\MapperProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T18:25:00.917Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

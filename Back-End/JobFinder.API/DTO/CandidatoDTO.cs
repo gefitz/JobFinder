@@ -11,6 +11,7 @@
         public string CEP { get; set; }
         public string Rua { get; set; }
         public int idCidade { get; set; }
+        public LoginDTO Login { get; set; }
 
     }
 }

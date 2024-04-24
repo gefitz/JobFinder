@@ -18,9 +18,13 @@ namespace JobFinder.Data.DataBase
         }
         public async Task<bool> CandidatoPost(CandidatoInsertModel candidato)
         {
-            if(candidato == null) return false;
+            if (candidato == null) return false;
 
-            if(await _command.ExecuteInsert("tbl_Candidato", candidato)) return true;
+            if (await _command.ExecuteInsert("tbl_Candidato", candidato))
+            {
+
+                return true;
+            };
 
             return false;
         }
