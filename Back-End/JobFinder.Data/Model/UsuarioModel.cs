@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace JobFinder.Data.Model
 {
-    public class CandidatoModel
+    public class UsuarioModel
     {
-        public int? idCandidato { get; set; }
+        public int? idUsuario { get; set; }
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
         public string CPF { get; set; }
@@ -18,8 +18,10 @@ namespace JobFinder.Data.Model
         public string CEP { get; set; }
         public string Rua { get; set; }
         public int idCidade { get; set; }
+        public int idLogin { get; set; }
+
     }
-    public class CandidatoInsertModel
+    public class UsuarioInsertModel
     {
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
@@ -29,7 +31,7 @@ namespace JobFinder.Data.Model
         public string CEP { get; set; }
         public string Rua { get; set; }
         public int idCidade { get; set; }
-        public LoginModel Login { get; set; }
+        public int idLogin {  get; set; }
     }
 
 }

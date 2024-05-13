@@ -23,9 +23,8 @@ namespace JobFinder.API.Service
             _login = login;
             _configuration = configuration;
         }
-        public async Task<string> CreateLogin(LoginDTO loginDTO)
+        public async Task<UserToken> CreateLogin(LoginInsertModel login,string password)
         {
-            var login = _mapper.Map<LoginInsertModel>(loginDTO);
             byte[] hash;
             byte[] salt;
             try
@@ -33,27 +32,28 @@ namespace JobFinder.API.Service
 
                 using (var hmac = new HMACSHA512())
                 {
-                    hash = hmac.ComputeHash(Encoding.UTF8.GetBytes(loginDTO.password));
+                    hash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
                     salt = hmac.Key;
                 }
-                login.passorwdSalt = salt;
-                login.passorwdHash = hash;
-                if (await _login.CreateLogin(login)) 
+                login.passwordSalt = salt;
+                login.passwordHash = hash;
+                if (await _login.CreateLogin(login))
                 {
-                    return await Authentication(loginDTO);
+
+                    return await Authentication(login.userLogin, password) ;
                 }
 
             }
             catch (Exception ex) { }
             return null;
         }
-        public async Task<string> Authentication(LoginDTO loginDTO)
+
+        public async Task<UserToken> Authentication(string username, string password)
         {
             try
             {
-                var login = _mapper.Map<LoginModel>(loginDTO);
-                var retLogin = await _login.BuscaLogin(login);
-                if (await ValidaSenha(retLogin, loginDTO.password))
+                var retLogin = await _login.BuscaLogin(username);
+                if (await ValidaSenha(retLogin, password))
                 {
                   return GenerateToken(retLogin);
                 }
@@ -65,7 +65,7 @@ namespace JobFinder.API.Service
 
             return null;
         }
-        private string GenerateToken(LoginModel login)
+        private UserToken GenerateToken(LoginModel login)
         {
             var claims = new[]
                    {
@@ -85,17 +85,20 @@ namespace JobFinder.API.Service
                 claims: claims,
                 expires: expiration,
                 signingCredentials: crendentials);
-            return new JwtSecurityTokenHandler().WriteToken(token);
+            return new UserToken() {
+                token = new JwtSecurityTokenHandler().WriteToken(token),
+                idUsuario = Convert.ToInt32(login.id)
+            };
         }
         private async Task<bool> ValidaSenha(LoginModel login,string passowrd)
         {
             
-            using var hmac = new HMACSHA512(login.PassorwdSalt);
+            using var hmac = new HMACSHA512(login.passwordSalt);
             var computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(passowrd));
 
             for (int i = 0; i < computedHash.Length; i++)
             {
-                if (computedHash[i] != login.PassowrdHash[i])
+                if (computedHash[i] != login.passwordHash[i])
                 {
                     return false;
                 }

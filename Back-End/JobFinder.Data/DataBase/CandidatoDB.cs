@@ -16,7 +16,7 @@ namespace JobFinder.Data.DataBase
         {
             _command = command;
         }
-        public async Task<bool> CandidatoPost(CandidatoInsertModel candidato)
+        public async Task<bool> CandidatoPost(UsuarioInsertModel candidato)
         {
             if (candidato == null) return false;
 

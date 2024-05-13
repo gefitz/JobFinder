@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ModalLoginService } from './Services/modal-login.service';
 
 @Component({
   selector: 'app-root',
@@ -7,14 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  mostrarComponente: boolean = false
+  abrirModal: boolean = true;
   title = 'JobFinder';
-  constructor(private router: Router){}
-  navegarParaCadastro() {
-    // this.mostrarComponente = true;
-    this.router.navigate(["/cadastro"])
-  }
-  navegarParaHome(){
-    this.mostrarComponente = false;
+
+  constructor(private router: Router, public modalLogin:ModalLoginService){}
+
+  AbrirModal(): void{
+    this.abrirModal = true;
   }
 }

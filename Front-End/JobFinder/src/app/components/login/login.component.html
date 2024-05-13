@@ -1,0 +1,29 @@
+<div class="div-form modal">
+  <div class="modal-content">
+    <form [formGroup]="formData" (ngSubmit)="login()" #form="ngForm">
+      <div class="formContent">
+        <input type="button" value="X" (click)="modal.FecharModal()">
+        <h2>Login</h2>
+        <div class="div-field">
+          Email<br>
+          <input type="email" formControlName="Email" required class="w350">
+          <div *ngIf="formData.get('Email')?.invalid && form.submitted" class="validation-error">
+            <span>Este campo é obrigatório.</span>            
+          </div>
+        </div>
+        <div class="div-field">
+          Senha <br>
+          <input type="password" formControlName="Senha" class="w350">
+          <div *ngIf="formData.get('Senha')?.invalid && form.submitted" class="validation-error">
+            <span>Este campo é obrigatório.</span>            
+          </div>
+        </div>
+      </div>
+      <div class="buttonModal">
+        <button type="submit">Entrar</button>
+        <button type="button" (click)="modal.FecharModal()">Fechar</button>
+      </div>
+    </form>
+  </div>
+  </div>
+  

@@ -11,13 +11,13 @@ namespace JobFinder.Data.Model
     {
         public int? id { get; set; }
         public string userLogin { get; set; }
-        public byte[] PassowrdHash { get; set; }
-        public byte[] PassorwdSalt {  get; set; }
+        public byte[] passwordHash { get; set; }
+        public byte[] passwordSalt { get; set; }
     }
     public class LoginInsertModel
     {
         public string userLogin { get; set; }
-        public byte[] passorwdHash { get; set; }
-        public byte[] passorwdSalt { get; set; }
+        public byte[] passwordHash { get; set; }
+        public byte[] passwordSalt { get; set; }
     }
 }

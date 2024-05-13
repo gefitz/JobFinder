@@ -3,11 +3,12 @@
     <a routerLink="/" class="h1-nav-bar"><img src="assets/img/logo.jpg" alt=""></a>
     <div class="div-btn-login">
 
-      <button type="button"class="btn-nav-bar login">Login</button>
+      <button type="button"class="btn-nav-bar login" (click)="modalLogin.AbrirModal()">Login</button>
       <button type="button" class="btn-nav-bar cadastro" routerLink="/cadastro">Cadastra-se</button>
     </div>
   </div>
-    <router-outlet></router-outlet>    
+    <router-outlet></router-outlet>
+    <app-login *ngIf="modalLogin.modalAberta"></app-login>   
     <footer class="footer">
       <ul>
         <li><a href="https://www.linkedin.com/in/geovane-de-almeida-fitz/"><i class="fab fa-linkedin"></i></a></li>

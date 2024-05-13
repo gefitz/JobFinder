@@ -16,13 +16,15 @@ builder.Services.AddScoped<Command>(opc => new Command(connection));
 builder.Services.AddAutoMapper(typeof(MapperProfile));
 
 #region Services
-builder.Services.AddScoped<CandidatoService>();
+builder.Services.AddScoped<UsuarioService>();
 builder.Services.AddScoped<LoginService>();
+builder.Services.AddScoped<CidadeService>();
 #endregion
 
 #region DB
 builder.Services.AddScoped<CandidatoDB>();
 builder.Services.AddScoped<LoginDB>();
+builder.Services.AddScoped<CidadeDB>();    
 #endregion
 
 builder.Services.AddEndpointsApiExplorer();
@@ -46,11 +48,23 @@ builder.Services.AddAuthentication(opt =>
     };
 });
 
+builder.Services.AddCors(opt =>
+{
+    opt.AddPolicy("AllowSpecificOrigin",
+        build =>
+        {
+            build.WithOrigins("http://localhost:4200")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+        });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    app.UseCors("AllowSpecificOrigin");
     app.UseSwagger();
     app.UseSwaggerUI();
 }

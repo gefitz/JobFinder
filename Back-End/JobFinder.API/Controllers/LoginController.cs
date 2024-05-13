@@ -14,31 +14,14 @@ namespace JobFinder.API.Controllers
         {
             _service = service;
         }
-        [HttpPost("create")]
-        public async Task<ActionResult<UserToken>> CreateLogin(LoginDTO login) 
-        {
-            if(login == null) { return BadRequest("Favor colocar as informações de login"); }
-            var token = await _service.CreateLogin(login);
-            if (token != null)
-            {
-                return new UserToken
-                {
-                    token = token,
-                };
-            }
-            return BadRequest("Não foi possivel realizar o cadastro de login");
-        }
         [HttpPost("authentication")]
-        public async Task<ActionResult<UserToken>> Authentication(LoginDTO login)
+        public async Task<ActionResult<UserToken>> Authentication(string username, string password)
         {
-            if (login == null) { return BadRequest("Usuario/senha incorretas"); }
-            var token = await _service.Authentication(login);
+            if (username == null || password == null) { return BadRequest("Usuario/senha passados de forma vazia"); }
+            var token = await _service.Authentication(username,password);
             if (token != null) {
 
-                return new UserToken
-                {
-                    token = token,
-                };
+                return token;
             }
             return BadRequest();
         }

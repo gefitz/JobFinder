@@ -17,10 +17,11 @@ namespace JobFinder.Data.DataBase
         {
             _command = command;
         }
-        public async Task<LoginModel> BuscaLogin(LoginModel login)
+        public async Task<LoginModel> BuscaLogin(string username)
         {
-            var query = $"Select idLogin,userLogin,passorwdSalt,passorwdHash from tbl_Login where userLogin='{login.userLogin}'";
+            var query = $"Select idLogin,userLogin,passwordSalt,passwordHash from tbl_Login where userLogin='{username}'";
             SqlConnection connection = new SqlConnection();
+            LoginModel login = new LoginModel();
             try
             {
                 using (connection = _command.OpenConnection(connection))
@@ -32,8 +33,8 @@ namespace JobFinder.Data.DataBase
                         {
                             login.id = Convert.ToInt32(result["idLogin"].ToString());
                             login.userLogin = Convert.ToString(result["userLogin"]);
-                            login.PassorwdSalt = (byte[])result["passorwdSalt"];
-                            login.PassowrdHash = (byte[])result["passorwdHash"];
+                            login.passwordSalt = (byte[])result["passwordSalt"];
+                            login.passwordHash = (byte[])result["passwordHash"];
                         }
                     }
                     _command.CloseConnection(connection);
@@ -55,7 +56,7 @@ namespace JobFinder.Data.DataBase
             }
             return false;
         }
-        public async Task<bool> AlterarSenha(LoginModel login)
+        public async Task<bool> AlterarSenha(UsuarioModel login)
         {
             return false;
         }

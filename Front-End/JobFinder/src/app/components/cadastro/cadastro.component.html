@@ -1,42 +1,93 @@
- <div class="div-form">
-
-   <form (ngSubmit)="enviarForm(formDir)" #formDir="ngForm">
-     <div class="formContent">
-       <h2>Dados Pessoais</h2>
-       <div class="div-field">
-         <label for="nome">Nome</label>
-         <input type="text" id="nome" name="nome" required class="w350">
-        </div>
-        <div class="div-field">
-          <label for="sobrenome">Sobrenome</label>
-          <input type="email" id="sobrenome" name="sobrenome"class="w330">
-        </div>
-        <div class="div-field">
-          <label for="cpf">CPF</label>
-          <input type="text" id="cpf" name="cpf" required class="w150">
-        </div>
-        <div class="div-field">
-          <label for="tef">Telefone</label>
-          <input type="text" id="tef" name="tef" required>
-        </div>
-        <div class="div-field">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required class="w335">
-        </div>
-        <div class="div-field">
-          <label for="cep">CEP</label>
-          <input type="txt" id="cep" name="cep" required class="w150">
-        </div>
-        <div class="div-field">
-          <label for="rua">Rua</label>
-          <input type="txt" id="rua" name="rua" required class="w350">
-        </div>
-        <div class="div-field">
-          <label for="numero">Numero</label>
-          <input type="txt" id="numero" name="numero" required class="w150">
+<div class="div-form">
+  <form [formGroup]="formData" (ngSubmit)="enviarForm()" #form="ngForm">
+    <div class="formContent">
+      <h2>Dados Pessoais</h2>
+      <div class="div-field">
+        Nome<br>
+        <input type="text" formControlName="nome" required class="w350">
+        <div *ngIf="formData.get('nome')?.invalid && form.submitted" class="validation-error">
+          <span>Este campo é obrigatório.</span>            
         </div>
       </div>
-      <button type="submit">Enviar</button>
-    </form>
-  </div>
-    
+      <div class="div-field">
+        Sobrenome <br>
+        <input type="text" formControlName="sobrenome" class="w330">
+      </div>
+      <div class="div-field">
+        Email <br>
+        <input type="email" formControlName="email" required class="w335">
+        <div *ngIf="formData.get('email')?.invalid && form.submitted" class="validation-error">
+          <span>Este campo é obrigatório.</span>            
+        </div>
+      </div>
+      <div class="div-field">
+        Senha <br>
+        <input type="password" formControlName="password" required class="w150">
+        <div *ngIf="formData.get('password')?.invalid && form.submitted" class="validation-error">
+          <span>Este campo é obrigatório.</span>            
+        </div>
+      </div>
+      <div class="div-field">
+        Confirma Senha<br>
+        <input type="password" formControlName="confirmaSenha" required class="w150">
+        <div *ngIf="formData.get('confirmaSenha')?.invalid && form.submitted" class="validation-error">
+          <span>Este campo é obrigatório.</span>            
+        </div>
+      </div>
+      <div class="div-field">
+        CPF <br>
+        <input type="text" formControlName="cpf" required class="w150">
+        <div *ngIf="formData.get('cpf')?.invalid && form.submitted" class="validation-error">
+          <span>Este campo é obrigatório.</span>            
+        </div>
+      </div>
+      <div class="div-field">
+        Telefone <br>
+        <input type="text" formControlName="telefone" required class="w150">
+        <div *ngIf="formData.get('telefone')?.invalid && form.submitted" class="validation-error">
+          <span>Este campo é obrigatório.</span>            
+        </div>
+      </div>
+      <div class="div-field">
+        Estado <br>
+        <select formControlName="estado" class="w150" (change)="filterCidade($event.target)">
+          <option *ngFor="let estado of estados" [value]="estado?.siglaEstado">{{ estado?.estado }}</option>
+        </select>
+        <div *ngIf="formData.get('estado')?.invalid && form.submitted" class="validation-error">
+          <span>Este campo é obrigatório.</span>            
+        </div>
+      </div>
+      <div class="div-field">
+        Cidade <br>
+        <select formControlName="idCidade" class="w150">
+          <option *ngFor="let cidade of cidades" [value]="cidade?.idCidade">{{ cidade?.cidade }}</option>
+        </select>
+        <div *ngIf="formData.get('idCidade')!.invalid && form.submitted" class="validation-error">
+          <span>Este campo é obrigatório.</span>            
+        </div>
+      </div>
+      <div class="div-field">
+        CEP <br>
+        <input type="text" formControlName="cep" required class="w150">
+        <div *ngIf="formData.get('cep')?.invalid && form.submitted" class="validation-error">
+          <span>Este campo é obrigatório.</span>            
+        </div>
+      </div>
+      <div class="div-field">
+        Rua <br>
+        <input type="text" formControlName="rua" required class="w335">
+        <div *ngIf="formData.get('rua')?.invalid && form.submitted" class="validation-error">
+          <span>Este campo é obrigatório.</span>            
+        </div>
+      </div>
+      <div class="div-field">
+        Numero <br>
+        <input type="text" formControlName="numero" required class="w170">
+        <div *ngIf="formData.get('numero')?.invalid && form.submitted" class="validation-error">
+          <span>Este campo é obrigatório.</span>            
+        </div>
+      </div>
+    </div>
+    <button type="submit">Enviar</button>
+  </form>
+</div>
