@@ -23,7 +23,7 @@ namespace JobFinder.API.Service
         public async Task<UserToken> CandidatoPostAsync(UsuarioDTO candidatoDTO)
         {
             var candidato = _mapper.Map<UsuarioInsertModel>(candidatoDTO);
-            UserToken token = await _loginService.CreateLogin(new LoginInsertModel { userLogin= candidatoDTO.Email }, candidatoDTO.password);
+            UserToken token = await _loginService.CreateLogin(new LoginInsertModel { usuario= candidatoDTO.Email }, candidatoDTO.password);
             if(token == null) { return null; }
             candidato.idLogin = token.idUsuario;
             if(await _dbCandidato.CandidatoPost(candidato))
@@ -32,5 +32,9 @@ namespace JobFinder.API.Service
             }
             return null;
         }
-    }
+        public async Task<IEnumerable<UsuarioDTO>> GetCandidato(object pesquisa)
+        {
+          return  _mapper.Map<IEnumerable<UsuarioDTO>>( await _dbCandidato.getCandidato(pesquisa));
+        }
+}
 }

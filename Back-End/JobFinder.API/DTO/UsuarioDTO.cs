@@ -5,12 +5,11 @@ namespace JobFinder.API.DTO
 {
     public class UsuarioDTO
     {
-        public int? idCandidato { get; set; }
+        public int? idUsuario{ get; set; }
         [Required]
-        public string Nome { get; set; }
-        public string Sobrenome { get; set; }
+        public string Nome_Usuario { get; set; }
         [Required]
-        public string CPF { get; set; }
+        public string CPF_CNPJ { get; set; }
         [Required]
         public string Telefone { get; set; }
         [Required]
@@ -24,6 +23,9 @@ namespace JobFinder.API.DTO
         [Required]
         [PasswordPropertyText]
         public string password { get; set; }
+        public DateTime dthNascimento { get; set; }
+        public DateTime dthRegistro { get; set; }
+        public short tUsuario { get; set; }
 
     }
 }

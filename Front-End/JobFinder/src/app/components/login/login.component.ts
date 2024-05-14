@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ModalLoginService } from 'src/app/Services/modal-login.service';
-import { ApiService, ParametroEnvio } from 'src/app/Services/ApiService';
+import { AuthenticationService } from 'src/app/Services/authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -10,8 +10,7 @@ import { ApiService, ParametroEnvio } from 'src/app/Services/ApiService';
 })
 export class LoginComponent implements OnInit {
   formData!: FormGroup;
-  parametroEnvio: ParametroEnvio = {endpoint: "", data: {}};
-  constructor(public modal: ModalLoginService, private api: ApiService) { }
+  constructor(public modal: ModalLoginService, private auth: AuthenticationService) { }
 
   ngOnInit(): void {
     this.formData = new FormGroup({
@@ -21,15 +20,7 @@ export class LoginComponent implements OnInit {
   }
   login(){
     const login = this.formData.value;
-    this.parametroEnvio.endpoint = "Login/authentication?username="+ login.Email +"&password="+login.Senha;
-    this.api.post(this.parametroEnvio).subscribe(
-      (response) => {
-        const tokenJson = JSON.parse(JSON.stringify(response));
-        localStorage.setItem("token", tokenJson.token);
-        localStorage.setItem("idUsuario", tokenJson.idUsuario);
-        
-      }
-    )
+    this.auth.login(login);
   }
 
 }

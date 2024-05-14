@@ -35,12 +35,12 @@ namespace JobFinder.API.Service
                     hash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
                     salt = hmac.Key;
                 }
-                login.passwordSalt = salt;
-                login.passwordHash = hash;
+                login.salt = salt;
+                login.hash = hash;
                 if (await _login.CreateLogin(login))
                 {
 
-                    return await Authentication(login.userLogin, password) ;
+                    return await Authentication(login.usuario, password) ;
                 }
 
             }
@@ -70,7 +70,7 @@ namespace JobFinder.API.Service
             var claims = new[]
                    {
                         new Claim("id",login.id.ToString()),
-                        new Claim("user", login.userLogin.ToString()),
+                        new Claim("user", login.usuario.ToString()),
                         new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
                     };
             var privateKy = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["jwt:secretkey"]));
@@ -93,12 +93,12 @@ namespace JobFinder.API.Service
         private async Task<bool> ValidaSenha(LoginModel login,string passowrd)
         {
             
-            using var hmac = new HMACSHA512(login.passwordSalt);
+            using var hmac = new HMACSHA512(login.salt);
             var computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(passowrd));
 
             for (int i = 0; i < computedHash.Length; i++)
             {
-                if (computedHash[i] != login.passwordHash[i])
+                if (computedHash[i] != login.hash[i])
                 {
                     return false;
                 }

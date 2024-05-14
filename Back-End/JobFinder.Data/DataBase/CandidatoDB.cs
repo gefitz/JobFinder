@@ -20,13 +20,22 @@ namespace JobFinder.Data.DataBase
         {
             if (candidato == null) return false;
 
-            if (await _command.ExecuteInsert("tbl_Candidato", candidato))
+            if (await _command.ExecuteInsert("tbl_Usuario", candidato))
             {
 
                 return true;
             };
 
             return false;
+        }
+        public async Task<IEnumerable<UsuarioModel>> getCandidato(object pesquisa)
+        {
+            var ret = await _command.ExecuteProcedure("BuscaCandidato", pesquisa);
+            if(ret != null)
+            {
+
+            }
+            return null;
         }
     }
 }

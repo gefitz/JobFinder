@@ -1,16 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { HomeComponent } from './components/home/home.component';
-import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms'
-import {HttpClientModule} from '@angular/common/http'
-import { ApiService } from './Services/ApiService';
+import { ReactiveFormsModule,FormsModule } from '@angular/forms'
+import {HttpClientModule,HTTP_INTERCEPTORS} from '@angular/common/http'
 import { LoginComponent } from './components/login/login.component';
 import { AreaUsuarioComponent } from './components/area-usuario/area-usuario.component';
+import { AuthIntercerptorService } from './Services/auth-intercerptor.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +25,11 @@ import { AreaUsuarioComponent } from './components/area-usuario/area-usuario.com
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [ApiService],
+  providers: [    {
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthIntercerptorService,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

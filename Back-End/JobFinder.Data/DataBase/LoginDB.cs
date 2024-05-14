@@ -19,7 +19,7 @@ namespace JobFinder.Data.DataBase
         }
         public async Task<LoginModel> BuscaLogin(string username)
         {
-            var query = $"Select idLogin,userLogin,passwordSalt,passwordHash from tbl_Login where userLogin='{username}'";
+            var query = $"Select idLogin,usuario,salt,hash from tbl_Login where usuario='{username}'";
             SqlConnection connection = new SqlConnection();
             LoginModel login = new LoginModel();
             try
@@ -32,9 +32,9 @@ namespace JobFinder.Data.DataBase
                         while(result.Read())
                         {
                             login.id = Convert.ToInt32(result["idLogin"].ToString());
-                            login.userLogin = Convert.ToString(result["userLogin"]);
-                            login.passwordSalt = (byte[])result["passwordSalt"];
-                            login.passwordHash = (byte[])result["passwordHash"];
+                            login.usuario = Convert.ToString(result["usuario"]);
+                            login.salt = (byte[])result["salt"];
+                            login.hash = (byte[])result["hash"];
                         }
                     }
                     _command.CloseConnection(connection);
